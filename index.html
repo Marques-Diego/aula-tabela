@@ -5,32 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+
+    <style>
+        th, td {
+            border: 1px solid black;
+        }
+
+        tfoot {
+            background: cyan;
+        }
+    </style>
+
+
 </head>
 <body>
     <h1>Tabela</h1>
 
     <table>
-        <tr>
-            <th>Roupa</th>
-            <th>Cor</th>
-            <th>Tamanho</th>
-            <th>Preço</th>
-            <th>Disponibilidade</th>         
-        </tr>
-        <tr>
-            <td>Camiseta</td>
-            <td>Vermelha</td>
-            <td>M</td>
-            <td>R$ 70,00</td>
-            <td>Em estoque</td>         
-        </tr>
-        <tr>
-            <td>Bermuda</td>
-            <td>Vermelha</td>
-            <td>M</td>
-            <td>R$ 160,00</td>
-            <td>Esgotado</td>
-        </tr>
+        <thead> <!--Tag de Cabeçalho da tabela -->
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Black Friday</th>
+            </tr>
+        </thead> 
+        
+        <tbody> <!--Tag de corpo da tabela -->
+            <tr>
+                <td>Produto 1</td> 
+                <td colspan="">2</td> 
+                <td>R$ 100,00</td>
+                <td rowspan="2">Sim</td>
+
+                <!-- 
+                A tag colspan serve para mesclar as COLUNAS, ou seja, vai expandir para o lado, ocupando a coluna seguinte.
+                
+                A tag rowspan serve para mesclar as LINHAS, ou seja, vai expandir para baixo, ocupando as linhas seguintes.     
+
+                Dentro do "" inserimos o número de colunas ou linhas que queremos mesclar, sempre a partir do número 2 para que possa surtir efeito.
+                -->
+            </tr>
+
+            <tr>
+                <td>Produto 2</td>
+                <td>5</td>
+                <td>R$ 300,00</td>
+            </tr>
+
+            <tr>
+                <td>Produto 3</td>
+                <td>1</td>
+                <td>R$ 50,00</td>
+                <td>Não</td>
+            </tr>
+        </tbody> 
+        
+        <tfoot> <!--Tag de rodapé da tabela -->
+            <tr>
+                <td colspan="3">Total</td>
+                <td>R$ 450,00</td>
+            </tr>
+        </tfoot> 
+
     </table>    
 </body>
 </html>
